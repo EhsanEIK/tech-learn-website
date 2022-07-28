@@ -20,3 +20,8 @@
 .carousel-item p {
     font-size: 2vw;
 }
+
+.custom-margin-bottom {
+    margin-bottom: 130px;
+    ;
+}

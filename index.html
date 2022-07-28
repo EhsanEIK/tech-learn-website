@@ -20,7 +20,7 @@
 <body>
     <header>
         <!-- nav bar -->
-        <nav class="container navbar navbar-expand-lg bg-light">
+        <nav class="container navbar navbar-expand-lg fixed-top bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand text-uppercase fw-bold fs-3" href="#">Tech Learn</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -34,16 +34,16 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="#mission">About</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link" href="#">Courses</a>
+                            <a class="nav-link" href="#courses">Courses</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link" href="#">Blogs</a>
+                            <a class="nav-link" href="#faq">Blogs</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link" href="#">Feedback</a>
+                            <a class="nav-link" href="#students-feedback">Feedback</a>
                         </li>
                         <li class="nav-item me-3">
                             <a class="nav-link" href="#">Contact</a>
@@ -51,13 +51,13 @@
                     </ul>
                 </div>
                 <form class="d-flex d-lg-block d-md-none d-none" role="search">
-                    <button class="btn btn-outline-primary" type="submit">Register</button>
+                    <a href="#enroll" class="btn btn-outline-primary" type="submit">Register</a>
                 </form>
             </div>
         </nav>
 
         <!-- top banner slider -->
-        <section class="mb-5">
+        <section class="container custom-margin-bottom my-5">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="3000">
@@ -110,7 +110,7 @@
 
     <main class="container">
         <!-- all courses section -->
-        <section class="my-5">
+        <section class="custom-margin-bottom" id="courses">
             <div class="text-center mb-5">
                 <h1>Check Our All Courses</h1>
                 <p>Here is our all course, you can check the course and select your desired one. Best of Luck!!!</p>
@@ -206,8 +206,8 @@
         </section>
 
         <!-- our mission section -->
-        <section class="my-5">
-            <div class="row g-5">
+        <section class="custom-margin-bottom" id="mission">
+            <div class="row gx-5 gy-3">
                 <div class="col-lg-6 col-md-6 col-12">
                     <img class="img-fluid" src="./images/student/students.jpg" alt="">
                 </div>
@@ -226,7 +226,7 @@
         </section>
 
         <!-- enroll section -->
-        <section class="container my-5 bg-primary rounded-2 p-5">
+        <section class="custom-margin-bottom bg-primary rounded-2 p-5" id="enroll">
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-12 text-white text-lg-start text-md-center text-center">
                     <h2>Ready To Enroll?</h2>
@@ -237,15 +237,55 @@
                 <div class="col-lg-6 col-md-12 col-12 d-flex justify-content-lg-end justify-content-md-center justify-content-center
                     align-items-center">
                     <div>
-                        <button class="btn btn-light btn-outline-secondary fw-bold py-2 px-4">Register Now</button>
+                        <button type="button" class="btn btn-light btn-outline-secondary fw-bold py-2 px-4"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal">Register Now</button>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Fill The Form</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput" placeholder="name">
+                                        <label for="floatingInput">Name</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="floatingInput"
+                                            placeholder="name@example.com">
+                                        <label for="floatingInput">Email Address</label>
+                                    </div>
+                                    <div class="form-floating">
+                                        <input type="password" class="form-control" id="floatingPassword"
+                                            placeholder="Password">
+                                        <label for="floatingPassword">Password</label>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- our students feedback -->
-        <section class="my-5">
-            <h1 class="my-5">Our Students Feedback</h1>
+        <section class="custom-margin-bottom" id="students-feedback">
+            <div class="my-5 text-center">
+                <h1>Our Students Feedback</h1>
+                <p>These all are our successful students who completed at least one course from us. Now, they shared
+                    their
+                    feelings and feedback about the journey.</p>
+            </div>
             <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1  g-4">
                 <!-- student-1 -->
                 <div class="col">
@@ -284,7 +324,7 @@
                     </div>
                 </div>
                 <!-- student-4 -->
-                <div class="col">
+                <div class="col d-lg-block d-md-block d-none">
                     <div class="card">
                         <img src="./images/student/student-4.png" class="card-img-top" alt="student-4">
                         <div class="card-body">
@@ -296,10 +336,13 @@
                     </div>
                 </div>
             </div>
+            <div class="text-center mt-5 d-lg-block d-md-none d-block">
+                <button class="btn btn-primary py-2 px-4">View All</button>
+            </div>
         </section>
 
         <!-- FAQ section -->
-        <section class="my-5">
+        <section class="custom-margin-bottom" id="faq">
             <div class="row">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
@@ -433,7 +476,7 @@
         </section>
 
         <!-- companies logo section -->
-        <section class="my-5 d-lg-block d-md-none d-none">
+        <section class="custom-margin-bottom d-lg-block d-md-none d-none">
             <h1 class="fw-bold text-center mb-4">Trsusted by over 500+ companies</h1>
             <div class="d-flex justify-content-center align-items-center gap-5">
                 <!-- ul>li*6>img[src="./images/company/company-$.png" alt="company-$"] -->
