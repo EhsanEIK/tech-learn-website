@@ -1,5 +1,5 @@
 /* --------------------------------
-    for darkern slider image
+    for darker slider image
 --------------------------------*/
 .carousel-item::before {
     content: "";
@@ -23,5 +23,4 @@
 
 .custom-margin-bottom {
     margin-bottom: 130px;
-    ;
 }
